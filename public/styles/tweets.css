@@ -1,10 +1,12 @@
 article.tweet  {
-  height: 250px;
+  height: 270px;
   border: groove;
   margin-top: 40px;
+  margin-bottom: 20px;
   padding-top: 15px;
   padding-right: 15px;
   padding-left: 15px;
+  /* box-shadow: 6px 6px lightgray; */
 }
 
 article.tweet header {
@@ -37,11 +39,12 @@ article.tweet article {
   margin-top: 16px;
   color: lightgray;
   font-weight: bold;
+  padding-right: 15px;
 }
 
-article.tweet header p {
-  margin-left: 15px;
-}
+/* article.tweet header p {
+  margin-left: 0px;
+} */
 
 article.tweet section p {
   width: 100%;
@@ -49,3 +52,35 @@ article.tweet section p {
   padding-right: 20px;
 }
 
+article.tweet footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10%;
+  border-top: groove;
+  padding-top: 22px
+}
+
+article.tweet footer p {
+  font-size: 15px;
+  padding-left: 15px;
+}
+
+article.tweet footer div {
+  color: #4056A1;
+  padding-right: 22px;
+  padding-bottom: 7px;
+  padding-top: 5px;
+}
+
+article.tweet footer div :hover {
+  color: goldenrod;
+}
+
+article.tweet:hover {
+  box-shadow: 5px 5px lightgray;
+}
+
+article.tweet footer div i {
+  padding-left: 4px;
+}
