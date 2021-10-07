@@ -55,17 +55,27 @@ $(document).ready(function() {
   
   };
 
-  $tweetData = $(this).serialize();
+
 
   $("form").submit(function(event) {
     event.preventDefault();
+    
+    if ($(this).serialize().length <= 5) {
+      alert("Cannot post empy message");
 
-  $.ajax({
-    type: "POST",
-    url: "http://localhost:8080/tweets",
-    data: $(this).serialize(),
-  });
-  
+    }
+    else if ($(this).serialize().length > 205) {
+      alert("Message is too long");
+
+    } 
+    else {
+      $.ajax({
+      type: "POST",
+      url: "http://localhost:8080/tweets",
+      data: $(this).serialize(),
+      })
+      $("#tweet-test").val("");
+    }
   });
 
   const loadTweets = function() {
