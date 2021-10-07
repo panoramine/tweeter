@@ -7,6 +7,14 @@
 $(document).ready(function() {
 
   const createTweetElement = function(datas) {
+
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
+    const safeText = escape(datas["content"]["text"])
      
     const $tweet = $(`
     <article class="tweet">
@@ -25,7 +33,7 @@ $(document).ready(function() {
       </header>
       <section>
         <p>
-          ${datas["content"]["text"]}
+          ${safeText}
         </p>
       </section>
       <footer>
@@ -45,15 +53,13 @@ $(document).ready(function() {
   };
   
   const renderTweets = function(tweets) {
-    
     $(".tweet-container").empty();
 
     tweets.forEach((tweet) => {
       const $tweetHolder = createTweetElement(tweet);
-      
+
       $(".tweet-container").append($tweetHolder);
     });
-  
   };
 
 
