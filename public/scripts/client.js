@@ -6,6 +6,9 @@
 
 $(document).ready(function() {
 
+  $("#error-empty").hide()
+  $("#error-too-long").hide()
+
   const createTweetElement = function(datas) {
 
     const escape = function (str) {
@@ -14,7 +17,7 @@ $(document).ready(function() {
       return div.innerHTML;
     };
 
-    const safeText = escape(datas["content"]["text"])
+    const $safeText = escape(datas["content"]["text"])
      
     const $tweet = $(`
     <article class="tweet">
@@ -33,7 +36,7 @@ $(document).ready(function() {
       </header>
       <section>
         <p>
-          ${safeText}
+          ${$safeText}
         </p>
       </section>
       <footer>
@@ -66,16 +69,38 @@ $(document).ready(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
-    
-    if ($(this).serialize().length <= 5) {
-      alert("Cannot post empy message");
 
+    if ($(this).serialize().length <= 5) {
+      if ($("#error-empty").is(":hidden") && $("#error-too-long").is(":hidden")) {
+        $("#error-empty").slideDown("slow");
+      }
+
+      if (!$("#error-too-long").is(":hidden")) {
+        $("#error-too-long").slideUp("slow");
+        $("#error-empty").slideDown("slow");
+      }
     }
     else if ($(this).serialize().length > 205) {
-      alert("Message is too long");
+      if ($("#error-empty").is(":hidden") && $("#error-too-long").is(":hidden")) {
+        $("#error-too-long").slideDown("slow");
+      }
 
+      if (!$("#error-empty").is(":hidden")) {
+        $("#error-empty").slideUp("slow");
+        $("#error-too-long").slideDown("slow");
+      }
     } 
     else {
+      if (!$("#error-empty").is(":hidden")) {
+
+        $("#error-empty").slideUp("slow");
+      }
+
+      if (!$("#error-too-long").is(":hidden")) {
+
+        $("#error-too-long").slideUp("slow");
+      }
+
       $.ajax({
       type: "POST",
       url: "http://localhost:8080/tweets",

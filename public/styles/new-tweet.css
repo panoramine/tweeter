@@ -49,3 +49,11 @@ output {
 output.danger {
   color: red;
 }
+
+.c-validation {
+  border-style: solid;
+  border-color: crimson;
+  color: crimson;
+  padding: 0.3em;
+  text-align: center;
+}

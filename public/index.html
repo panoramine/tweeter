@@ -57,6 +57,16 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <h3 id="error-empty" class="c-validation">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          Cannot post empy message
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </h3>
+        <h3 id="error-too-long" class="c-validation">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          Message is too long
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </h3>
         <h2></h2>
         <form method="POST" action="/tweets" class="tweet-form">
           <label for="tweet-text" class="tweet-label">What are you humming about?</label>
