@@ -7,7 +7,7 @@
 $(document).ready(function() {
 
   const createTweetElement = function(datas) {
-      
+     
     const $tweet = $(`
     <article class="tweet">
       <header>
@@ -45,12 +45,13 @@ $(document).ready(function() {
   };
   
   const renderTweets = function(tweets) {
- 
-    tweets.reverse().forEach((tweet) => {
-      $tweetHolder = createTweetElement(tweet);
-  
+    
+    $(".tweet-container").empty();
+
+    tweets.forEach((tweet) => {
+      const $tweetHolder = createTweetElement(tweet);
+      
       $(".tweet-container").append($tweetHolder);
-  
     });
   
   };
@@ -74,7 +75,10 @@ $(document).ready(function() {
       url: "http://localhost:8080/tweets",
       data: $(this).serialize(),
       })
-      $("#tweet-test").val("");
+      .then(() => {
+        $("#tweet-text").val("");
+        loadTweets()
+      })
     }
   });
 
@@ -85,11 +89,13 @@ $(document).ready(function() {
       url: "http://localhost:8080/tweets"
     })
     .then((result) => {
-      console.log(result)
-      renderTweets(result)
+      const reversedResult = result.reverse();
+
+      renderTweets(reversedResult)
     })
   }
   loadTweets()
+
 });
 
 

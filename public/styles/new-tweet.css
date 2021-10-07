@@ -23,6 +23,7 @@ textarea {
   height: 35px;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  height: 48px;
 }
 
 label.tweet-label {
