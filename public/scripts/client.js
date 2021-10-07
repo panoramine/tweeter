@@ -45,7 +45,7 @@ $(document).ready(function() {
   };
   
   const renderTweets = function(tweets) {
-    console.log("hello")
+ 
     tweets.forEach((tweet) => {
       $tweetHolder = createTweetElement(tweet);
   
@@ -81,6 +81,21 @@ $(document).ready(function() {
   ]
 
   renderTweets(data);
+
+  $tweetData = $(this).serialize();
+
+  $("form").submit(function(event) {
+    event.preventDefault();
+
+    // console.log($(this).serialize())
+
+  $.ajax({
+    type: "POST",
+    url: "http://localhost:8080/tweets",
+    data: $(this).serialize(),
+  });
+  
+  });
 });
 
 
