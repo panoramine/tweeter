@@ -91,3 +91,36 @@ article.tweet footer div i {
     padding-left: 9px;
   }  
 }
+
+@media only screen and (max-width: 500px) {
+  article.tweet header section {
+    margin-top: 14px;
+  }
+
+  article.tweet header section div i {
+    height: 66px;
+  }
+
+  article.tweet header section div p {
+    font-size: 23px;
+    margin-top: 6px;
+    padding-left: 10px;
+  }
+
+  article.tweet header section article {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  article.tweet footer {
+    margin-top: 20px;
+  }
+
+  article.tweet footer div {
+    padding-right: 15px;
+  }
+
+  article.tweet footer div i {
+    padding-left: 6px;
+  }
+} 
