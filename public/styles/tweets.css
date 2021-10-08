@@ -100,7 +100,15 @@ article.tweet footer div i {
   article.tweet header {
     padding-right: 0px;
     padding-left: 9px;
-  }  
+  }
+
+  article.tweet article {
+    font-size: 22px;
+  }
+
+  article.tweet section p {
+    padding-left: 15px;
+  }
 }
 
 /* mobile  */
