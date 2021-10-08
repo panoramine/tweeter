@@ -24,10 +24,12 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+/* required font  */
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* styling main tweet body  */
 main {
   width: 90%;
   background-color: #f4f1ec;
@@ -35,6 +37,7 @@ main {
   text-align: justify;
 }
 
+/* desktop  */
 @media only screen and (min-width: 1024px) {
   
   main {

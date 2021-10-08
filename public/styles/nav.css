@@ -9,6 +9,7 @@ nav {
   width: 100%;
 }
 
+/* fixing nav in place */
 nav span {
   display: inline-block;
   position: absolute;
@@ -19,6 +20,7 @@ nav span {
 
 }
 
+/* compose elements  */
 nav div.right-side-content {
   float: right;
   padding-top: 1.7em;
@@ -31,6 +33,7 @@ nav div.arrow {
   text-align: center;
 }
 
+/* tablet  */
 @media only screen and (min-width: 500px) and (max-width: 1023px) {
   nav {
     background-color: #cc7000;
@@ -38,7 +41,7 @@ nav div.arrow {
   }
 }
 
-
+/* mobile  */
 @media only screen and (max-width: 499px) {
   nav span {
     font-size: 32px;

@@ -1,3 +1,4 @@
+/* tweets "box"  */
 article.tweet  {
   height: 270px;
   border: groove;
@@ -8,6 +9,7 @@ article.tweet  {
   padding-left: 15px;
 }
 
+/* avatar, user and handle */
 article.tweet header {
   background-color: transparent;
   height: 85px;
@@ -17,15 +19,18 @@ article.tweet header {
   margin: auto;
 }
 
+/* positioning header elements  */
 article.tweet header section {
   margin: auto;
 }
 
+/* positioning header elements  */
 article.tweet header div {
   display: flex;
   flex-direction: row;
 }
 
+/* positioning header elements  */
 article.tweet section {
   width: 100%;
   display: flex;
@@ -34,6 +39,7 @@ article.tweet section {
   margin-top: 5px;
 }
 
+/* handle style  */
 article.tweet article {
   margin-top: 16px;
   color: lightgray;
@@ -41,6 +47,7 @@ article.tweet article {
   padding-right: 15px;
 }
 
+/* user name  */
 article.tweet section p {
   width: 100%;
   padding-left: 20px;
@@ -56,11 +63,13 @@ article.tweet footer {
   padding-top: 22px
 }
 
+/* time stamp style  */
 article.tweet footer p {
   font-size: 15px;
   padding-left: 15px;
 }
 
+/* footer buttons  */
 article.tweet footer div {
   color: #4056A1;
   padding-right: 22px;
@@ -68,6 +77,7 @@ article.tweet footer div {
   padding-top: 5px;
 }
 
+/* hover animation  */
 article.tweet footer div :hover {
   color: goldenrod;
 }
@@ -76,10 +86,12 @@ article.tweet:hover {
   box-shadow: 5px 5px lightgray;
 }
 
+/* space between footer icons  */
 article.tweet footer div i {
   padding-left: 4px;
 }
 
+/* desktop  */
 @media only screen and (min-width: 1024px) {
   article.tweet footer {
     margin-top: 15px;
@@ -91,6 +103,7 @@ article.tweet footer div i {
   }  
 }
 
+/* mobile  */
 @media only screen and (max-width: 500px) {
   article.tweet header section {
     margin-top: 14px;

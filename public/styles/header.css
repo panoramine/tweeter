@@ -1,3 +1,4 @@
+/* username, avatar and space around  */
 header {
   background-color: goldenrod;
   display: flex;
@@ -9,13 +10,13 @@ header {
   padding-top: 150px;
 }
 
-
+/* username  */
 header div.name {
   margin-top: -30px;
   font-size: 34px;
 }
 
-
+/* desktop  */
 @media only screen and (min-width: 1024px) {
   header {
     float: left;
@@ -28,6 +29,7 @@ header div.name {
 
 }
 
+/* tablet  */
 @media only screen and (max-width: 1023px) {
   header {
     padding-top: 116px;
@@ -35,6 +37,7 @@ header div.name {
   }
 }
 
+/* mobile  */
 @media only screen and (max-width: 500px) {
   header {
     width: 100%;

@@ -5,12 +5,14 @@
  */
 
 $(document).ready(function() {
-
+  // hide error messages
   $("#error-empty").hide();
   $("#error-too-long").hide();
 
+  // function that generates the DOM structure for a tweet, given a tweet object 
   const createTweetElement = function(datas) {
 
+    //XSS logic
     const escape = function(str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
@@ -55,6 +57,7 @@ $(document).ready(function() {
     return $tweet;
   };
   
+  //function responsible for taking in an array of tweet objects and appending each one to the html
   const renderTweets = function(tweets) {
     $(".tweet-container").empty();
 
@@ -66,10 +69,12 @@ $(document).ready(function() {
   };
 
 
-
+  
   $("form").submit(function(event) {
+    //prevent redirect from POST request
     event.preventDefault();
 
+    //check tweet validation and show appropriate error message
     if ($(this).serialize().length <= 5) {
       if ($("#error-empty").is(":hidden") && $("#error-too-long").is(":hidden")) {
         $("#error-empty").slideDown("slow");
@@ -101,6 +106,7 @@ $(document).ready(function() {
         $("#error-too-long").slideUp("slow");
       }
 
+      //form submission with jQuery
       $.ajax({
         type: "POST",
         url: "http://localhost:8080/tweets",
@@ -113,6 +119,7 @@ $(document).ready(function() {
     }
   });
 
+  //function use jQuery to make request to /tweets and receive the array of tweets as JSON
   const loadTweets = function() {
 
     $.ajax({

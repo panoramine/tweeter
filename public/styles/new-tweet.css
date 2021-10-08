@@ -1,13 +1,15 @@
+/* horizontal center  */
 section.new-tweet {
   margin: auto;
-
 }
 
+/* spacing around textarea  */
 div.wrapper {
   padding: 20px;
   margin:15px 0;
   padding: 0;
 }
+
 
 textarea {
   width: 100%;
@@ -20,12 +22,12 @@ textarea {
   resize: none;
   border-bottom: groove;
   outline: none;
-  height: 35px;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
   height: 48px;
 }
 
+/* handler info  */
 label.tweet-label {
   color: grey;
   font-weight: bold;
@@ -41,6 +43,7 @@ button {
   border-radius: 2px;
 }
 
+/* character counter  */
 output {
   float: right;
   font-weight: bold;
@@ -49,6 +52,7 @@ output {
 output.danger {
   color: red;
 }
+
 
 .c-validation {
   border-style: solid;
