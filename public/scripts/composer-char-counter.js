@@ -3,7 +3,7 @@ $(document).ready(function() {
   $("#tweet-text").on('input propertychange',  function() {
 
     let txtContent = $('#tweet-text').val();
-    let strCount = (140 - txtContent.length);     
+    let strCount = (140 - txtContent.length);  
 
     $(".counter").val(strCount);
 

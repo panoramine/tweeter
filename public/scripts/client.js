@@ -6,18 +6,18 @@
 
 $(document).ready(function() {
 
-  $("#error-empty").hide()
-  $("#error-too-long").hide()
+  $("#error-empty").hide();
+  $("#error-too-long").hide();
 
   const createTweetElement = function(datas) {
 
-    const escape = function (str) {
+    const escape = function(str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
     };
 
-    const $safeText = escape(datas["content"]["text"])
+    const $safeText = escape(datas["content"]["text"]);
      
     const $tweet = $(`
     <article class="tweet">
@@ -89,7 +89,7 @@ $(document).ready(function() {
         $("#error-empty").slideUp("slow");
         $("#error-too-long").slideDown("slow");
       }
-    } 
+    }
     else {
       if (!$("#error-empty").is(":hidden")) {
 
@@ -102,14 +102,14 @@ $(document).ready(function() {
       }
 
       $.ajax({
-      type: "POST",
-      url: "http://localhost:8080/tweets",
-      data: $(this).serialize(),
+        type: "POST",
+        url: "http://localhost:8080/tweets",
+        data: $(this).serialize(),
       })
       .then(() => {
         $("#tweet-text").val("");
-        loadTweets()
-      })
+        loadTweets();
+      });
     }
   });
 
@@ -122,10 +122,11 @@ $(document).ready(function() {
     .then((result) => {
       const reversedResult = result.reverse();
 
-      renderTweets(reversedResult)
-    })
-  }
-  loadTweets()
+      renderTweets(reversedResult);
+    });
+  };
+  
+  loadTweets();
 });
 
 
