@@ -9,6 +9,16 @@ $(document).ready(function() {
   $("#error-empty").hide();
   $("#error-too-long").hide();
 
+  // hide textarea 
+  $(".tweet-form").hide();
+
+  // show tweet form when clicking "write a new tweet" arrow
+  // focus on textarea
+  $(".arrow").on("click", function() {
+    $(".tweet-form").slideDown("slow");
+    $("#tweet-text").focus();
+  })
+
   // function that generates the DOM structure for a tweet, given a tweet object 
   const createTweetElement = function(datas) {
 
