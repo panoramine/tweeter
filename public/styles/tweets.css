@@ -14,7 +14,7 @@ article.tweet header {
   height: 85px;
   padding-top: 10px;
   padding-bottom: 15px;
-  width: 98%;
+  width: 99%;
   margin: auto;
 }
 
@@ -79,4 +79,15 @@ article.tweet:hover {
 
 article.tweet footer div i {
   padding-left: 4px;
+}
+
+@media only screen and (min-width: 1024px) {
+  article.tweet footer {
+    margin-top: 15px;
+  }
+
+  article.tweet header {
+    padding-right: 0px;
+    padding-left: 9px;
+  }  
 }
