@@ -31,8 +31,27 @@ nav div.right-side-content {
 nav div.arrow {
   color: red;
   text-align: center;
+  animation: updown 1s linear infinite;
 }
 
+nav div.arrow:hover {
+  color: crimson;
+}
+
+/* arrow animation function  */
+@keyframes updown {
+  0% {
+    transform: translateY(-8%);
+  }
+
+  50% {
+    transform: translateY(20%);
+  }
+
+  100% {
+    transform: translateY(-8%);
+  }
+}
 /* tablet  */
 @media only screen and (min-width: 500px) and (max-width: 1023px) {
   nav {
