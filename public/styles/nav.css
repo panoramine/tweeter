@@ -1,5 +1,5 @@
 nav {
-  height: 120px;
+  height: 100px;
   background-color: #4056A1;
   color: #FFFFFF;
   padding-left: 1.5em;
@@ -15,14 +15,13 @@ nav span {
   align-items: flex-end;
   font-family: 'Bungee', cursive;
   font-size: 45px;
-  padding-top: 1em;
+  padding-top: 0.8em;
 
 }
 
 nav div.right-side-content {
-  display: inline-block;
   float: right;
-  padding-top: 2.5em;
+  padding-top: 1.7em;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
 }
@@ -30,5 +29,13 @@ nav div.right-side-content {
 nav div.arrow {
   color: red;
   text-align: center;
+}
+
+@media only screen and (max-width: 1023px) {
+  nav {
+    background-color: #cc7000;
+    background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+
+  }
 }
 
