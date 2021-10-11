@@ -15,7 +15,7 @@ $(document).ready(function() {
   // show tweet form when clicking "write a new tweet" arrow
   // focus on textarea
   $(".arrow").on("click", function() {
-    $(".tweet-form").slideDown("slow");
+    $(".tweet-form").slideDown();
     $("#tweet-text").focus();
   })
 
@@ -87,33 +87,33 @@ $(document).ready(function() {
     //check tweet validation and show appropriate error message
     if ($(this).serialize().length <= 5) {
       if ($("#error-empty").is(":hidden") && $("#error-too-long").is(":hidden")) {
-        $("#error-empty").slideDown("slow");
+        $("#error-empty").slideDown();
       }
 
       if (!$("#error-too-long").is(":hidden")) {
-        $("#error-too-long").slideUp("slow");
-        $("#error-empty").slideDown("slow");
+        $("#error-too-long").slideUp();
+        $("#error-empty").slideDown();
       }
     }
     else if ($('#tweet-text').val().length > 140) {
       if ($("#error-empty").is(":hidden") && $("#error-too-long").is(":hidden")) {
-        $("#error-too-long").slideDown("slow");
+        $("#error-too-long").slideDown();
       }
 
       if (!$("#error-empty").is(":hidden")) {
-        $("#error-empty").slideUp("slow");
-        $("#error-too-long").slideDown("slow");
+        $("#error-empty").slideUp();
+        $("#error-too-long").slideDown();
       }
     }
     else {
       if (!$("#error-empty").is(":hidden")) {
 
-        $("#error-empty").slideUp("slow");
+        $("#error-empty").slideUp();
       }
 
       if (!$("#error-too-long").is(":hidden")) {
 
-        $("#error-too-long").slideUp("slow");
+        $("#error-too-long").slideUp();
       }
 
       //form submission with jQuery
