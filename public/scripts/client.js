@@ -95,7 +95,7 @@ $(document).ready(function() {
         $("#error-empty").slideDown("slow");
       }
     }
-    else if ($(this).serialize().length > 205) {
+    else if ($('#tweet-text').val().length > 140) {
       if ($("#error-empty").is(":hidden") && $("#error-too-long").is(":hidden")) {
         $("#error-too-long").slideDown("slow");
       }
