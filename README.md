@@ -22,6 +22,4 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["Desktop version"](https://github.com/panoramine/tweeter/blob/master/docs/desktop-version.png?raw=true)
 
-!["Tablet version"](https://github.com/panoramine/tweeter/blob/master/docs/tablet-version.png?raw=true)
-
 !["Mobile version"](https://github.com/panoramine/tweeter/blob/master/docs/mobile-version.png?raw=true)
